@@ -21,19 +21,30 @@ void exibirTabuleiro(int tabuleiro[10][10]) {
 }
 
 int main() {
-    int tabuleiro[10][10] = {0};  // Inicializa o tabuleiro com 0 (água)
+    int tabuleiro[10][10] = {0}; // Inicializa o tabuleiro com água (0)
 
-    // Coloca um navio horizontal ocupando 3 casas
-    tabuleiro[2][4] = 3;  // Posição (C, 5)
-    tabuleiro[2][5] = 3;  // Posição (C, 6)
-    tabuleiro[2][6] = 3;  // Posição (C, 7)
+    // Colocando os navios
+    // Navio na diagonal (A1, B2, C3)
+    tabuleiro[0][0] = 3;
+    tabuleiro[1][1] = 3;
+    tabuleiro[2][2] = 3;
 
-    // Coloca um navio vertical ocupando 3 casas
-    tabuleiro[5][7] = 3;  // Posição (F, 8)
-    tabuleiro[6][7] = 3;  // Posição (G, 8)
-    tabuleiro[7][7] = 3;  // Posição (H, 8)
+    // Navio na vertical (F3, G3, H3)
+    tabuleiro[5][2] = 3;
+    tabuleiro[6][2] = 3;
+    tabuleiro[7][2] = 3;
 
-    // Exibe o tabuleiro
+    // Navio na horizontal direita (E7, E8, E9)
+    tabuleiro[4][6] = 3;
+    tabuleiro[4][7] = 3;
+    tabuleiro[4][8] = 3;
+
+    // Navio na horizontal esquerda (J6, I7, H8)
+    tabuleiro[7][7] = 3;
+    tabuleiro[8][6] = 3;
+    tabuleiro[9][5] = 3;
+
+    // Imprimir o tabuleiro
     exibirTabuleiro(tabuleiro);
 
     return 0;
